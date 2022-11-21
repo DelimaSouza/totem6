@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Merriweather+Sans:wght@600&family=Poppins:wght@700&family=Righteous&family=Roboto:wght@700&family=Rubik&family=Sarala&display=swap');
+
+
+
+
+
+
+
+			
+
+
+.container02 {
+   height: 350px;
+   width: 500px;
+}
+
+.aluno {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(255 255 255 / 20%);
+  border: none;
+  height: 50px;
+  width: 250px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  font-size:15px;
+  border-radius: 15px;
+  padding-left: 20px;
+  box-shadow: 1px 1px 6px #ff2600,
+  -1px -1px 6px #ff2600;
+}
+
+#aluno::placeholder {
+  color: rgb(0, 0, 0);
+}
+
+.serie {
+  position: absolute;
+  top: 52.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(255 255 255 / 20%);
+  border: none;
+  height: 50px;
+  width: 250px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  font-size:15px;
+  border-radius: 15px;
+  padding-left: 20px;
+  box-shadow: 1px 1px 6px #e9573f,
+  -1px -1px 6px #e9573f;
+}
+
+.data {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(255 255 255 / 20%);
+  border: none;
+  height: 50px;
+  width: 250px;
+  outline: none;
+  color: rgb(0, 0, 0);
+  font-size:15px;
+  border-radius: 15px;
+  padding-left: 20px;
+  box-shadow: 1px 1px 6px #e9573f,
+  -1px -1px 6px #e9573f;
+}
+
+
+.criar{
+    position: absolute;
+    z-index: 1;
+    display: block;
+    width: 144px;
+    height: 41px;
+    background: #e9573f;
+    text-align: center;
+    line-height: 44px;
+    border-radius: 14px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+  }
+
+  .criar2{
+    position: absolute;
+    top: 85%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    color: #ff2600;
+  }
+
+  .imagem {
+    border-radius: 15px;
+    position: relative;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%);
+  }
