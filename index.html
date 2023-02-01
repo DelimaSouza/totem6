@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Totem 4.0</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
@@ -201,7 +202,6 @@
               
                 <div class="col-sm-6 mb-3 mb-sm-0"> 
                 
-                 
                   <input id="aluno" type="text" class="aluno" name="Aluno" placeholder="Aluno">
                   <select   type="text" class="serie" name="Série" placeholder="Série">
                     <option value="6°EF">6°EF</option>
@@ -220,13 +220,10 @@
                     <option value="30/01/2023">30/01/2023</option>
                     <option value="31/01/2023">31/01/2023</option>
                     <option value="01/02/2023">01/02/2023</option>
-		    <option value="02/02/2023">02/02/2023</option>
-		    <option value="03/02/2023">03/02/2023</option>
-                    
+                    <option value="02/02/2023">02/02/2023</option>
+                    <option value="03/02/2023">03/02/2023</option>
                   </select>
                 </div>
-              
-          
               
                 <div class="criar2">
                   <input class="criar" type="submit" href="index2.html" value="CADASTRAR" >
@@ -510,9 +507,143 @@
 
       <!-- Contact Start -->
       <section id="contact" class="section contact w-100">
-        <div class="container">
-          <h3 class="subtitle1">EM BREVE</h3>
-          <!-- Map -->
+    
+        <div class="container7">
+
+          
+            <div class="heading-meta-container">
+              <h2 class="heading-title">CONSULTA DE SALDO</h2>
+              <h6 class="description">Coloque seu ID no campo abaixo e consulte seu saldo!</h6>
+            </div>
+          
+            <div id="enterDetails">
+            <h1>CADASTRAR</h1>
+    
+            <h4>ID</h4> 
+            <input id="enterID" type="text"> 
+    
+            <h4>Nome</h4> 
+            <input id="enterName" type="text"> 
+    
+            <h4>Saldo</h4> 
+            <input id="enterAge" type="number"> <br><br>
+    
+            <button id="insert">INSERIR</button>
+            <button id="update">ATUALIZAR</button>
+            <button id="remove">REMOVER</button> <br><br>
+        </div>
+    
+        <div id="findDetails">
+            
+            <input id="findID" type="text" placeholder="ID"> <br><br>
+            <button id="find">CONSULTAR</button>
+            <h3 id="findName" type="text" class="consulta-texto"></h3>
+            <h3 id="findAge" type="number" class="consulta-texto2"></h3> <br><br>
+        </div>
+        
+    
+        <script type="module">
+            
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+            import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-analytics.js";
+            
+    
+            
+            const firebaseConfig = {
+                apiKey: "AIzaSyAWiOW6Il1TPpo7ICO7XkWUL8gLz6ze42A",
+                authDomain: "nitcsn.firebaseapp.com",
+                databaseURL: "https://nitcsn-default-rtdb.firebaseio.com",
+                projectId: "nitcsn",
+                storageBucket: "nitcsn.appspot.com",
+                messagingSenderId: "705760216424",
+                appId: "1:705760216424:web:5663a8aec86720cda382dd",
+                measurementId: "G-5QFD2CTKW5"
+            };
+    
+            
+            const app = initializeApp(firebaseConfig);
+            const analytics = getAnalytics(app);
+       
+    
+            import {getDatabase, ref, get, set, child, update, remove}
+            from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js"
+    
+            const db = getDatabase();
+    
+            var enterID = document.querySelector("#enterID");
+            var enterName = document.querySelector("#enterName");
+            var enterAge = document.querySelector("#enterAge");
+            var findID = document.querySelector("#findID");
+            var findName = document.querySelector("#findName");
+            var findAge = document.querySelector("#findAge");
+          
+    
+            var insertBtn = document.querySelector("#insert");
+            var updateBtn = document.querySelector("#update");
+            var removeBtn = document.querySelector("#remove");
+            var findBtn = document.querySelector("#find");
+    
+            function InsertData() {
+                set(ref(db, "People/"+ enterID.value),{
+                    Name: enterName.value,
+                    ID: enterID.value,
+                    Age: enterAge.value
+                })
+                .then(()=>{
+                    alert("Data added successfully");
+                })
+                .catch((error)=>{
+                    alert(error);
+                });
+            }
+    
+            function FindData() {
+                const dbref = ref(db);
+    
+                get(child(dbref, findID.value))
+                .then((snapshot)=>{
+                    if(snapshot.exists()){
+                        findName.innerHTML = "Nome: " + snapshot.val().Nome;
+                        findAge.innerHTML = "Saldo: " + snapshot.val().Saldo;
+                    } else {
+                        alert("Não tá funcionando");
+                    }
+                })
+                .catch((error)=>{
+                    alert(error)
+                })
+                
+            }
+    
+            function UpdateData(){
+                update(ref(db, "People/"+ enterID.value),{
+                    Name: enterName.value,
+                    Age: enterAge.value
+                })
+                .then(()=>{
+                    alert("Data updated successfully");
+                })
+                .catch((error)=>{
+                    alert(error);
+                });
+            }
+    
+            function RemoveData(){
+                remove(ref(db, "People/"+ enterID.value))
+                .then(()=>{
+                    alert("Data deleted successfully");
+                })
+                .catch((error)=>{
+                    alert(error);
+                });
+            }
+    
+            insertBtn.addEventListener('click', InsertData);
+            updateBtn.addEventListener('click', UpdateData);
+            removeBtn.addEventListener('click', RemoveData);
+            findBtn.addEventListener('click', FindData);
+    
+          </script>
          
         </div>
       </section>
