@@ -1,16 +1,11 @@
-$(document).ready(function () {
+const event = new Date('August 19, 1975 23:15:30');
+event.setHours(20);
 
-    var start = new Date();
-    var end = new Date();
-    var time = new Date().getTime();
-    
-       //Set the start hours and ending hours
-    if (time > start.setHours(04,30) && time < end.setHours(20,49)) {
-        $('.criar2').show();
-        $('.fechado').hide();
-    }
-    else {
-        $('.criar2').hide();
-        $('.fechado').show();
-        }
-    });
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:15:30 GMT+0200 (CEST)"
+// Note: your timezone may vary
+
+event.setHours(20, 21, 22);
+
+console.log(event);
+// Expected output: "Tue Aug 19 1975 20:21:22 GMT+0200 (CEST)"
