@@ -5,7 +5,7 @@ $(document).ready(function () {
     var time = new Date().getTime();
     
        //Set the start hours and ending hours
-    if (time > start.setHours(04,30) && time < end.setHours(17,40)) {
+    if (time > start.setHours(04,30) && time < end.setHours(17,45)) {
         $('.criar2').show();
         $('.fechado').hide();
     }
