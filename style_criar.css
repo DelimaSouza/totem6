@@ -222,3 +222,15 @@
   #findID::placeholder {
     color: rgb(0, 0, 0);
   }
+
+.fechado {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.horario-texto {
+  font-size: 20px;
+  color: red;
+}
