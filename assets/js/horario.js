@@ -11,6 +11,9 @@ $(document).ready(function () {
     }
     else {
         $('.criar2').hide();
+        $('.aluno').hide();
+        $('.serie').hide();
+        $('.data').hide();
         $('.fechado').show();
         }
     });
