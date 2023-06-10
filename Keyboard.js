@@ -22,6 +22,7 @@ const Keyboard = {
     init() {
         // Create main elements
         this.elements.main = document.createElement("div");
+        this.elements.main.setAttribute("id", "teclado");
         this.elements.keysContainer = document.createElement("div");
 
         // Setup main elements
@@ -170,6 +171,7 @@ const Keyboard = {
         data.style.display = "none"
         serie.style.display = "none"
         cadastrar.style.display = "none"
+        teclado.style.display = "block"
     },
 
     close() {
@@ -181,15 +183,14 @@ const Keyboard = {
         data.style.display = "block"
         serie.style.display = "block"
         cadastrar.style.display = "block"
-        teclado.style.display = "block"
     }
 };
 
 function fechar() {
     teclado.style.display = "none"
     data.style.display = "block"
-    serie.style.display = "block"
-    cadastrar.style.display = "block"
+        serie.style.display = "block"
+        cadastrar.style.display = "block"
 }
 
 window.addEventListener("DOMContentLoaded", function () {
