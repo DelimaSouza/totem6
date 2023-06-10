@@ -233,4 +233,5 @@
 .horario-texto {
   font-size: 20px;
   color: red;
+  display: hidden;
 }
