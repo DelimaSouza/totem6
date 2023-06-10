@@ -10,6 +10,8 @@
     transition: bottom 0.4s;
     z-index: 100;
     border-radius: 15px;
+    display: block;
+    overflow: hidden;
 }
 
 .keyboard--hidden {
@@ -49,6 +51,11 @@
     width: 12%;
 }
 
+.keyboard__fechar {
+    position: absolute;
+    width: 1000px;
+}
+
 .keyboard__key--extra-wide {
     width: 70%;
     max-width: 500px;
@@ -70,5 +77,6 @@
 }
 
 .keyboard__key--dark {
-    background: rgba(0, 0, 0, 0.25);
+    background: #ff2600;
+    color: white;
 }
