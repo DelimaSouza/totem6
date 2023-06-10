@@ -181,8 +181,16 @@ const Keyboard = {
         data.style.display = "block"
         serie.style.display = "block"
         cadastrar.style.display = "block"
+        teclado.style.display = "block"
     }
 };
+
+function fechar() {
+    teclado.style.display = "none"
+    data.style.display = "block"
+    serie.style.display = "block"
+    cadastrar.style.display = "block"
+}
 
 window.addEventListener("DOMContentLoaded", function () {
     Keyboard.init();
