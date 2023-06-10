@@ -6,14 +6,14 @@ $(document).ready(function () {
     
        //Set the start hours and ending hours
     if (time > start.setHours(04,30) && time < end.setHours(08,00)) {
-        $('.criar2').show();
-        $('.fechado').hide();
+        $('.criar2').hide();
+        $('.fechado').show();
     }
     else {
-        $('.criar2').hide();
-        $('.aluno').hide();
-        $('.serie').hide();
-        $('.data').hide();
-        $('.fechado').show();
+        $('.criar2').show();
+        $('.aluno').show();
+        $('.serie').show();
+        $('.data').show();
+        $('.fechado').hide();
         }
     });
