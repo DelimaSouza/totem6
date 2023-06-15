@@ -234,3 +234,13 @@
   font-size: 20px;
   color: red;
 }
+
+.nome-escola {
+  position: relative;
+  top: -370%;
+  left: 10%;
+}
+
+.ola {
+  font-size: 16px;
+}
