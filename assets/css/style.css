@@ -659,9 +659,9 @@ width: 300px;
 .colegio {
   position: absolute;
   font-family: "Poppins", sans-serif;
-  line-height: 1.618;
+  line-height: 1.118;
   color: #ffffff00;
-  font-size: 45px;
+  font-size: 30px;
 }
 
 /*------------------------- About -------------------------*/
@@ -2853,7 +2853,7 @@ box-shadow: 0 5px 14px 0 #009a7b;
   height: 100%;
   color: #f13a3a;
   -webkit-text-stroke: 0vw #f13a3a;
-  border-right: 6px solid #f13a3a;
+  border-right: 2px solid #f13a3a;
   overflow: hidden;
   animation: animate1 6s linear infinite;
 }
