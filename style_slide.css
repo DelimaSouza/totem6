@@ -1,4 +1,5 @@
 .slider-frame{
+     display: none;
     overflow: hidden;
     height: 400px;
     width: 650px;
