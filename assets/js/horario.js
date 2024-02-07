@@ -10,10 +10,10 @@ $(document).ready(function () {
         $('.fechado').hide();
     }
     else {
-        $('.criar2').show();
-        $('.aluno').show();
-        $('.serie').show();
-        $('.data').show();
-        $('.fechado').hide();
+        $('.criar2').hide();
+        $('.aluno').hide();
+        $('.serie').hide();
+        $('.data').hide();
+        $('.fechado').show();
         }
     });
